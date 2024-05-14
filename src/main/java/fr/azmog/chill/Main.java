@@ -2,8 +2,18 @@ package fr.azmog.chill;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main extends JavaPlugin {
 
+    public String prefix = "§d§lChill §7>> ";
+
+    public static Main instance;
+
+    @Override
+    public void onEnable() {
+        instance = this;
+    }
+
+    public static Main getInstance() {
+        return instance;
+    }
 }
